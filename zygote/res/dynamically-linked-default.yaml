@@ -1,0 +1,22 @@
+default_mode: deny
+syscalls:
+  write: true
+  read: true
+  open: true
+  close: true
+  openat: true
+  exit: true
+  brk: true
+  exit_group: true
+  arch_prctl: true
+  mmap: true
+  access: true
+  newfstatat: true
+  mprotect: true
+  pread64: true
+  set_tid_address: true
+  set_robust_list: true
+  rseq: true
+  prlimit64: true
+  munmap: true
+  fstat: true
