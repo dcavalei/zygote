@@ -1,7 +1,7 @@
-project(zyg)
+project(conf)
 
 add_library(${PROJECT_NAME} STATIC
-        Zygote.cpp
+        conf/ConfigYaml.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC
@@ -9,7 +9,9 @@ target_include_directories(${PROJECT_NAME} PUBLIC
         ${CMAKE_SOURCE_DIR}/${CMAKE_PROJECT_NAME}/include
 )
 
-target_link_libraries(${PROJECT_NAME} PUBLIC
-        spdlog
-        seccomp
+target_link_libraries(${PROJECT_NAME}
+        PUBLIC
+        yaml-cpp::yaml-cpp
+        PRIVATE
+        spdlog::spdlog
 )

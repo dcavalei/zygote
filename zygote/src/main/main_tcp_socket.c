@@ -76,11 +76,12 @@ void notify(char *msg, int self) {
 }
 
 int main(int ac, char **av) {
-  if (ac != 2) {
-    write(2, "usage: ./main_tcp_socket <port>\n",
-          strlen("usage: ./main_tcp_socket <port>\n"));
-    exit(1);
-  }
+    if (ac != 2) {
+        write(2, "usage: ./main_tcp_socket <port>\n",
+              strlen("usage: ./main_tcp_socket <port>\n"));
+        exit(1);
+    }
+
   int sockfd, connfd;
   unsigned int len;
   struct sockaddr_in servaddr, cli;
