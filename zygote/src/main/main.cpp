@@ -33,16 +33,6 @@ int main(int argc, char *argv[], char *envp[]) {
             .build();
     delete ptr;
 
-
-//    auto handle = dlopen(cfg.args[0].c_str(), RTLD_LAZY);
-//    if (!handle) {
-//        fprintf(stderr, "%s\n", dlerror());
-//        exit(EXIT_FAILURE);
-//    }
-//    SPDLOG_CRITICAL("{}", fmt::ptr(handle));
-//    auto main_func_ptr = dlsym(handle, "main");
-//    SPDLOG_CRITICAL("{}", fmt::ptr(main_func_ptr));
-
     // No more syscalls from this point onwards. TODO: make this crap better.
     filter->load();
 
